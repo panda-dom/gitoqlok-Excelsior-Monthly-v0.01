@@ -1,0 +1,7 @@
+{
+  "qName": "ServiceNote",
+  "qTags": [],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

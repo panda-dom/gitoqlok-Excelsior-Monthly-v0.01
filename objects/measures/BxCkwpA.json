@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "BxCkwpA",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "CY_Share",
+    "qDef": "Sum(SD_TotalTransitions__c) / Sum(SD_TotalLensesVolume__c)",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'YTD Penetration'",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "CY_Share",
+    "description": "",
+    "tags": []
+  }
+}

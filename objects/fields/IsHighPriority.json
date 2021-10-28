@@ -1,0 +1,10 @@
+{
+  "qName": "IsHighPriority",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

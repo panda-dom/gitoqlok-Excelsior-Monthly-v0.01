@@ -1,0 +1,10 @@
+{
+  "qName": "ServiceAppointment.Status",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

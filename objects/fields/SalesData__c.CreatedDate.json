@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "SalesData__c.CreatedDate",
+  "qTags": [
+    "$hidden",
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": []
+}

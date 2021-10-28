@@ -1,0 +1,7 @@
+{
+  "qName": "OperatingHoursId",
+  "qTags": [],
+  "qSrcTables": [
+    "Account"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__Count_of_Tasks__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

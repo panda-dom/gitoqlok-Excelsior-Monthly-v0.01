@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_Activate__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

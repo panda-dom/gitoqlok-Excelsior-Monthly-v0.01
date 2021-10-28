@@ -1,0 +1,13 @@
+{
+  "qName": "Id-SD_Account__c",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$key"
+  ],
+  "qSrcTables": [
+    "Account",
+    "ServiceAppointment",
+    "SalesData__c"
+  ]
+}

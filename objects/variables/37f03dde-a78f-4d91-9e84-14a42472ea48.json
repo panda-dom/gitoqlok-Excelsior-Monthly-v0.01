@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "37f03dde-a78f-4d91-9e84-14a42472ea48",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "Last_Sale_Date",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "= Max({< SD_TotalTransitions__c = {\">0\"}>} [Sales_Date])",
+  "tags": []
+}

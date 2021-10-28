@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "PhotoUrl",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

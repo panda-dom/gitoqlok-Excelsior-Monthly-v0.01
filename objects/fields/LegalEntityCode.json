@@ -1,0 +1,10 @@
+{
+  "qName": "LegalEntityCode",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "TransitionMonthlyDataJan20"
+  ]
+}

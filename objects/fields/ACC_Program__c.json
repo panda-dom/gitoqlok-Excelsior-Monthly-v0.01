@@ -1,0 +1,7 @@
+{
+  "qName": "ACC_Program__c",
+  "qTags": [],
+  "qSrcTables": [
+    "Account"
+  ]
+}

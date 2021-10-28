@@ -1,0 +1,10 @@
+{
+  "qName": "SalesData__c.Id",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "SalesData__c"
+  ]
+}

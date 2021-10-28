@@ -1,0 +1,10 @@
+{
+  "qName": "RollupDescription",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "UserRole"
+  ]
+}

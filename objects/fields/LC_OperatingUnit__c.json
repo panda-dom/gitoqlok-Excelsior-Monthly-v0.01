@@ -1,0 +1,12 @@
+{
+  "qName": "LC_OperatingUnit__c",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$geoname",
+    "$relates_LensCaster__c.LC_OperatingUnit__c_GeoInfo"
+  ],
+  "qSrcTables": [
+    "LensCaster__c"
+  ]
+}

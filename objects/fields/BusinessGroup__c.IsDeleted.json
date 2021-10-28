@@ -1,0 +1,10 @@
+{
+  "qName": "BusinessGroup__c.IsDeleted",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "BusinessGroup__c"
+  ]
+}

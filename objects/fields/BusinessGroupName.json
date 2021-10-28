@@ -1,0 +1,10 @@
+{
+  "qName": "BusinessGroupName",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "BusinessGroupParent"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "qName": "Incomplete_Reason__c",
+  "qTags": [
+    "$text"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

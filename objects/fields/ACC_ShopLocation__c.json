@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_ShopLocation__c",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

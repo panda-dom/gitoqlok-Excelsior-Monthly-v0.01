@@ -1,0 +1,12 @@
+{
+  "qName": "SD_Date__c",
+  "qTags": [
+    "$numeric",
+    "$integer",
+    "$timestamp",
+    "$date"
+  ],
+  "qSrcTables": [
+    "SalesData__c"
+  ]
+}

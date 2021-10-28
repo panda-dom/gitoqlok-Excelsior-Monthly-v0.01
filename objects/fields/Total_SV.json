@@ -1,0 +1,10 @@
+{
+  "qName": "Total_SV",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "TransitionMonthlyDataJan20"
+  ]
+}

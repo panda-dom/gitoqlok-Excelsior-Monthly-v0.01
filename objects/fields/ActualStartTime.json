@@ -1,0 +1,10 @@
+{
+  "qName": "ActualStartTime",
+  "qTags": [
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

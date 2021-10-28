@@ -1,0 +1,10 @@
+{
+  "qName": "Task.CreatedDate",
+  "qTags": [
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

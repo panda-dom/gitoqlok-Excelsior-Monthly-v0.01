@@ -1,0 +1,10 @@
+{
+  "qName": "Total_PAL",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "TransitionMonthlyDataJan20"
+  ]
+}

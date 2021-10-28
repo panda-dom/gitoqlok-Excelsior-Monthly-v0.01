@@ -1,0 +1,10 @@
+{
+  "qName": "LensCaster__c.IsDeleted",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "LensCaster__c"
+  ]
+}

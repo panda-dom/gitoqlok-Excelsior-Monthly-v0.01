@@ -1,0 +1,10 @@
+{
+  "qName": "RecurrenceType",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

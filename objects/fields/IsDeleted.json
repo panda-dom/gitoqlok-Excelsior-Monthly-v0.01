@@ -1,0 +1,12 @@
+{
+  "qName": "IsDeleted",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$key"
+  ],
+  "qSrcTables": [
+    "Account",
+    "Task"
+  ]
+}

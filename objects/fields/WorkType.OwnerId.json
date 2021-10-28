@@ -1,0 +1,10 @@
+{
+  "qName": "WorkType.OwnerId",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

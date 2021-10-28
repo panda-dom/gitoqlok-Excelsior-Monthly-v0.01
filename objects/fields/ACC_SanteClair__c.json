@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_SanteClair__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

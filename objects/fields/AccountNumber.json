@@ -1,0 +1,10 @@
+{
+  "qName": "AccountNumber",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

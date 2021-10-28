@@ -1,0 +1,12 @@
+{
+  "qName": "Account.LastActivityDate",
+  "qTags": [
+    "$numeric",
+    "$integer",
+    "$timestamp",
+    "$date"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

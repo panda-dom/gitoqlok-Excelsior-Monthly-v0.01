@@ -1,0 +1,9 @@
+{
+  "qName": "ServiceAppointment.Duration",
+  "qTags": [
+    "$numeric"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "qName": "LC_Active__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "LensCaster__c"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "qName": "SD_PY_TotalLensesVolume__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "SalesData__c"
+  ]
+}

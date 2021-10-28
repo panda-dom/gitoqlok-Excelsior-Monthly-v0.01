@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "ACC_WeekClosingTime__c",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

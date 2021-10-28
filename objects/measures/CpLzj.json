@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "CpLzj",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "PY_Share_SV",
+    "qDef": "Sum(SD_PY_SVTransitions__c) / Sum(SD_PY_TotalSV__c)",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'PY Penetration SV'",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "PY_Share_SV",
+    "description": "",
+    "tags": []
+  }
+}

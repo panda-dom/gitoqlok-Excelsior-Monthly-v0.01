@@ -1,0 +1,10 @@
+{
+  "qName": "Task.Status",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

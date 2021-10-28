@@ -1,0 +1,9 @@
+{
+  "qIsHidden": true,
+  "qName": "BillingStreet",
+  "qTags": [
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

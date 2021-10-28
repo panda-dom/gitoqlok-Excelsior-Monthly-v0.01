@@ -1,0 +1,10 @@
+{
+  "qName": "DurationType",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__Schedule_Mode__c",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

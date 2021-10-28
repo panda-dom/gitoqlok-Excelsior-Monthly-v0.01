@@ -1,0 +1,10 @@
+{
+  "qName": "Account.IsDeleted",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

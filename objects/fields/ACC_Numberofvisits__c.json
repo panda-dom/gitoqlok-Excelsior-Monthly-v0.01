@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_Numberofvisits__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

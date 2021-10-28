@@ -1,0 +1,10 @@
+{
+  "qName": "BusinessGroup__c.OwnerId",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "BusinessGroup__c"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "qName": "LensCaster__c.OwnerId",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "LensCaster__c"
+  ]
+}

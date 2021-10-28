@@ -1,0 +1,10 @@
+{
+  "qName": "AppointmentNumber",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}
