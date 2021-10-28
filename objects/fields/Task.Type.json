@@ -1,0 +1,10 @@
+{
+  "qName": "Task.Type",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "SalesData__c.CreatedById",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

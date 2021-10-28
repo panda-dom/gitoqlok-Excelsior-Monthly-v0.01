@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__Auto_Schedule__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

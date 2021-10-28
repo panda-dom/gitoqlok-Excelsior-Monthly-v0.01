@@ -1,0 +1,10 @@
+{
+  "qName": "FSL_FTFR_Count__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

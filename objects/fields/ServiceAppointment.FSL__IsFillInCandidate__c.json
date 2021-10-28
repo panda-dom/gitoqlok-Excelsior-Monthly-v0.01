@@ -1,0 +1,10 @@
+{
+  "qName": "ServiceAppointment.FSL__IsFillInCandidate__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

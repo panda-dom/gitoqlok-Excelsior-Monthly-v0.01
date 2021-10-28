@@ -1,0 +1,7 @@
+{
+  "qName": "FSL__GanttLabel__c",
+  "qTags": [],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

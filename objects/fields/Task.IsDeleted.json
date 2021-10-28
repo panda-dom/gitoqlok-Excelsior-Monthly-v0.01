@@ -1,0 +1,10 @@
+{
+  "qName": "Task.IsDeleted",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

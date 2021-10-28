@@ -1,0 +1,10 @@
+{
+  "qName": "CustomerCode",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "TransitionMonthlyDataJan20"
+  ]
+}

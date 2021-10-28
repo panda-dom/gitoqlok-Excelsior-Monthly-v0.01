@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_TotalStaffTrainingStatus__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

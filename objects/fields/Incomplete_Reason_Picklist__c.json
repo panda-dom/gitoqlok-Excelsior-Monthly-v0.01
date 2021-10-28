@@ -1,0 +1,10 @@
+{
+  "qName": "Incomplete_Reason_Picklist__c",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

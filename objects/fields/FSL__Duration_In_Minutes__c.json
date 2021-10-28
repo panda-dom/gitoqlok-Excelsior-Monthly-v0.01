@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__Duration_In_Minutes__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

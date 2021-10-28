@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "Account.LastModifiedDate",
+  "qTags": [
+    "$hidden",
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": []
+}

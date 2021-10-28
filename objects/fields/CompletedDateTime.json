@@ -1,0 +1,10 @@
+{
+  "qName": "CompletedDateTime",
+  "qTags": [
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

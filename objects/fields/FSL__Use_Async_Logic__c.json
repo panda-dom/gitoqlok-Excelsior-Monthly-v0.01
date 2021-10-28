@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__Use_Async_Logic__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

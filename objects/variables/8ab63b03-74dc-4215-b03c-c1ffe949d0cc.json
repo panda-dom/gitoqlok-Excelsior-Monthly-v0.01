@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "8ab63b03-74dc-4215-b03c-c1ffe949d0cc",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "Last_Visit_Date",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "=Max(Date(ACC_LastVisitedDate__c, 'M/D/YYYY'))",
+  "tags": []
+}

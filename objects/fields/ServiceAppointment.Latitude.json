@@ -1,0 +1,9 @@
+{
+  "qName": "ServiceAppointment.Latitude",
+  "qTags": [
+    "$numeric"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

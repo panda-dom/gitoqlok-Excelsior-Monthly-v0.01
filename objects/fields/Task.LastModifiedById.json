@@ -1,0 +1,10 @@
+{
+  "qName": "Task.LastModifiedById",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

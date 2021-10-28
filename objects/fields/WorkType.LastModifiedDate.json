@@ -1,0 +1,10 @@
+{
+  "qName": "WorkType.LastModifiedDate",
+  "qTags": [
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

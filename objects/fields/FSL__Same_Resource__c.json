@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__Same_Resource__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

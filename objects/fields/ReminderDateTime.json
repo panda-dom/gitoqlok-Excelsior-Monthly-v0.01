@@ -1,0 +1,10 @@
+{
+  "qName": "ReminderDateTime",
+  "qTags": [
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

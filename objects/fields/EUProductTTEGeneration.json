@@ -1,0 +1,10 @@
+{
+  "qName": "EUProductTTEGeneration",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "TransitionMonthlyDataJan20"
+  ]
+}

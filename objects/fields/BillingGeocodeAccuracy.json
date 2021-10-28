@@ -1,0 +1,7 @@
+{
+  "qName": "BillingGeocodeAccuracy",
+  "qTags": [],
+  "qSrcTables": [
+    "Account"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "qName": "ShippingGeocodeAccuracy",
+  "qTags": [],
+  "qSrcTables": [
+    "Account"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "qName": "FSL_Compliance__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

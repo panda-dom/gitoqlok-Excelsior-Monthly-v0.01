@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "egMjXLN",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "=DATE(TIMESTAMP(Sales_Date),'MMM-YY')"
+    ],
+    "qFieldLabels": [
+      "Month_Year"
+    ],
+    "qLabelExpression": "Date",
+    "title": "Month_Year",
+    "coloring": {
+      "changeHash": "0.38776662529234085"
+    }
+  },
+  "qMetaDef": {
+    "title": "Month_Year",
+    "description": "",
+    "tags": []
+  }
+}

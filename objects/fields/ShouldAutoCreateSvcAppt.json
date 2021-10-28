@@ -1,0 +1,10 @@
+{
+  "qName": "ShouldAutoCreateSvcAppt",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

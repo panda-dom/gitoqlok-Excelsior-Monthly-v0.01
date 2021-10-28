@@ -1,0 +1,10 @@
+{
+  "qName": "BG_Active__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "BusinessGroup__c"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "qName": "ACC_MainBusinessGroup__c-Id",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$key"
+  ],
+  "qSrcTables": [
+    "Account",
+    "BusinessGroup__c",
+    "BusinessGroupParent"
+  ]
+}

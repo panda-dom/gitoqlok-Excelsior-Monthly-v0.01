@@ -1,0 +1,12 @@
+{
+  "qName": "ACC_OperatingUnit__c",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$geoname",
+    "$relates_Account.ACC_OperatingUnit__c_GeoInfo"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

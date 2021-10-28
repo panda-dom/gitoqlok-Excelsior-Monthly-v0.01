@@ -1,0 +1,10 @@
+{
+  "qName": "WorkType.LastModifiedById",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

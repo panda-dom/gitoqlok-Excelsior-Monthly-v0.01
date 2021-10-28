@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__InJeopardy__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

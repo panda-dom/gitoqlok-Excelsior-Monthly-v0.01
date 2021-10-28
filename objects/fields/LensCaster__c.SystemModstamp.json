@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "LensCaster__c.SystemModstamp",
+  "qTags": [
+    "$hidden",
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": []
+}

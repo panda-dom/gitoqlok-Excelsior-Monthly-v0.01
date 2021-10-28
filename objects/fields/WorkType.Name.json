@@ -1,0 +1,10 @@
+{
+  "qName": "WorkType.Name",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

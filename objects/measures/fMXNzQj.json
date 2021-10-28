@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "fMXNzQj",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "CY_Share_PAL",
+    "qDef": "Sum(SD_PAL_Transitions__c) / Sum(SD_TotalPAL__c)",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'YTD Penetration PAL'",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "CY_Share_PAL",
+    "description": "",
+    "tags": []
+  }
+}

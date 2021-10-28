@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_ShopPositioning__c",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "qIsHidden": true,
+  "qName": "ServiceAppointment.Longitude_ServiceAppointment.Latitude",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$geopoint",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

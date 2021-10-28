@@ -1,0 +1,10 @@
+{
+  "qName": "EUProductTTEColor",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "TransitionMonthlyDataJan20"
+  ]
+}

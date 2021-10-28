@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "ACC_ShopOwner__c",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

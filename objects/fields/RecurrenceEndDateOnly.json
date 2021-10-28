@@ -1,0 +1,12 @@
+{
+  "qName": "RecurrenceEndDateOnly",
+  "qTags": [
+    "$numeric",
+    "$integer",
+    "$timestamp",
+    "$date"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

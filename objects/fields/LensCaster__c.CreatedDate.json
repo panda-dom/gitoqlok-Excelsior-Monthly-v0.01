@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "LensCaster__c.CreatedDate",
+  "qTags": [
+    "$hidden",
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": []
+}

@@ -1,0 +1,7 @@
+{
+  "qName": "ACC_PointofSales__c",
+  "qTags": [],
+  "qSrcTables": [
+    "Account"
+  ]
+}

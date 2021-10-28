@@ -1,0 +1,10 @@
+{
+  "qName": "CreatedById",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "qName": "RecurrenceInterval",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

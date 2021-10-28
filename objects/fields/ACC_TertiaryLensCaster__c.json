@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_TertiaryLensCaster__c",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

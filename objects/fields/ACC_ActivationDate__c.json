@@ -1,0 +1,12 @@
+{
+  "qName": "ACC_ActivationDate__c",
+  "qTags": [
+    "$numeric",
+    "$integer",
+    "$timestamp",
+    "$date"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

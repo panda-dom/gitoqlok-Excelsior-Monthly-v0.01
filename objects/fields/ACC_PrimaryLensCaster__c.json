@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_PrimaryLensCaster__c",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

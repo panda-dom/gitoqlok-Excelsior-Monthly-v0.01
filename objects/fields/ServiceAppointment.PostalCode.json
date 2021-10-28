@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "ServiceAppointment.PostalCode",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

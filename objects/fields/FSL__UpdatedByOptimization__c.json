@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__UpdatedByOptimization__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

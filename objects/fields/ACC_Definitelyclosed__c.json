@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_Definitelyclosed__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

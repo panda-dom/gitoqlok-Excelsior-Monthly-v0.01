@@ -1,0 +1,9 @@
+{
+  "qName": "ActualDuration",
+  "qTags": [
+    "$numeric"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

@@ -1,0 +1,863 @@
+///$tab Auto-generated section
+Set dataManagerTables = '','Account','LensCaster__c','User','ServiceAppointment','Task','SalesData__c','BusinessGroup__c','UserRole','WorkType','BusinessGroupParent';
+//This block renames script tables from non generated section which conflict with the names of managed tables
+
+For each name in $(dataManagerTables) 
+    Let index = 0;
+    Let currentName = name; 
+    Let tableNumber = TableNumber(name); 
+    Let matches = 0; 
+    Do while not IsNull(tableNumber) or (index > 0 and matches > 0)
+        index = index + 1; 
+        currentName = name & '-' & index; 
+        tableNumber = TableNumber(currentName) 
+        matches = Match('$(currentName)', $(dataManagerTables));
+    Loop 
+    If index > 0 then 
+            Rename Table '$(name)' to '$(currentName)'; 
+    EndIf; 
+Next; 
+Set dataManagerTables = ;
+
+
+Unqualify *;
+
+__countryAliasesBase:
+LOAD
+	Alias AS [__Country],
+	ISO3Code AS [__ISO3Code]
+FROM [lib://DataFiles/countryAliases.qvd]
+(qvd);
+
+__countryGeoBase:
+LOAD
+	ISO3Code AS [__ISO3Code],
+	ISO2Code AS [__ISO2Code],
+	Polygon AS [__Polygon]
+FROM [lib://DataFiles/countryGeo.qvd]
+(qvd);
+
+__countryName2IsoThree:
+MAPPING LOAD
+	__Country,
+	__ISO3Code
+RESIDENT __countryAliasesBase;
+
+__countryCodeIsoThree2Polygon:
+MAPPING LOAD
+	__ISO3Code,
+	__Polygon
+RESIDENT __countryGeoBase;
+
+LIB CONNECT TO 'Transitions Development:Salesforce_BULK_Prod';
+
+
+[Account]:
+LOAD
+	[Id] AS [Id-SD_Account__c],
+	[IsDeleted] AS [Account.IsDeleted],
+	[MasterRecordId],
+	[Name],
+	[Type],
+	[RecordTypeId],
+	[ParentId],
+	[BillingStreet],
+	[BillingCity],
+	[BillingState],
+	[BillingPostalCode],
+	[BillingCountry],
+	[BillingLatitude],
+	[BillingLongitude],
+	[BillingGeocodeAccuracy],
+	[ShippingStreet],
+	[ShippingCity],
+	[ShippingState],
+	[ShippingPostalCode],
+	[ShippingCountry],
+	[ShippingLatitude],
+	[ShippingLongitude],
+	[ShippingGeocodeAccuracy],
+	[Phone] AS [Account.Phone],
+	[Fax] AS [Account.Fax],
+	[AccountNumber],
+	[Website],
+	[PhotoUrl],
+	[Sic],
+	[Industry],
+	[AnnualRevenue],
+	[NumberOfEmployees],
+	[Ownership],
+	[TickerSymbol],
+	[Description],
+	[Rating],
+	[Site],
+	[OwnerId] AS [Id-OwnerId],
+	[CreatedDate] AS [Account.CreatedDate],
+	[CreatedById] AS [Account.CreatedById],
+	[LastModifiedDate] AS [Account.LastModifiedDate],
+	[LastModifiedById] AS [Account.LastModifiedById],
+	[SystemModstamp] AS [Account.SystemModstamp],
+	[LastActivityDate] AS [Account.LastActivityDate],
+	[LastViewedDate] AS [Account.LastViewedDate],
+	[LastReferencedDate] AS [Account.LastReferencedDate],
+	[Jigsaw],
+	[JigsawCompanyId],
+	[AccountSource],
+	[SicDesc],
+	[OperatingHoursId],
+	[ACC_Activate__c],
+	[ACC_ActivatedBy__c] AS [ACC_PrimaryLensCaster__c-Id],
+	[ACC_ActivationDate__c],
+	[ACC_CarteBlanche__c],
+	[ACC_ClosedDays__c],
+	[ACC_Comments__c],
+	[ACC_Contact__c],
+	[ACC_Definitelyclosed__c],
+	[ACC_DoNotVisit__c],
+	[ACC_ECPInterest__c],
+	[ACC_Email__c],
+	[ACC_EngagementDate__c],
+	[ACC_ExternalID__c],
+	[ACC_Interest__c],
+	[ACC_IsTrained__c],
+	[ACC_Itelis__c],
+	[ACC_Kalixia__c],
+	[ACC_LastVisitedDate__c],
+	[ACC_LensCasterVisitDate__c],
+	[ACC_MainBusinessGroup__c] AS [ACC_MainBusinessGroup__c-Id],
+	[ACC_MainContact__c],
+	[ACC_MondayOpeningTime__c],
+	[ACC_NumberOfPeopleTrained__c],
+	[ACC_Numberofvisits__c],
+	[ACC_OperatingUnit__c],
+	[ACC_OpticianProfile__c],
+	[ACC_PointofSales__c],
+	[ACC_PrimaryCompetitor__c],
+	[ACC_PrimaryLensCaster__c],
+	[ACC_Priority__c],
+	[ACC_Program__c],
+	[ACC_ReasonNotToVisit__c],
+	[ACC_Reengagement_Date__c],
+	[ACC_RemainingToBeTrained__c],
+	[ACC_SanteClair__c],
+	[ACC_SecondaryLensCaster__c],
+	[ACC_Seveane__c],
+	[ACC_ShopLocation__c],
+	[ACC_ShopOwner__c],
+	[ACC_ShopPositioning__c],
+	[ACC_SurveySentAfterFirstTraining__c],
+	[ACC_SurveySentUponAccount__c],
+	[ACC_Targeted__c],
+	[ACC_TertiaryLensCaster__c],
+	[ACC_ToTarget__c],
+	[ACC_TotalStaffTrainingIndicator__c],
+	[ACC_TotalStaffTrainingStatus__c],
+	[ACC_TrainingStatus__c],
+	[ACC_Visit__c],
+	[ACC_WeekClosingTime__c],
+	[ACC_WeekOpeningTime__c],
+	[ACC_isActivated__c],
+	APPLYMAP( '__countryCodeIsoThree2Polygon', APPLYMAP( '__countryName2IsoThree', LOWER([BillingCountry])), '-') AS [Account.BillingCountry_GeoInfo],
+	APPLYMAP( '__countryCodeIsoThree2Polygon', APPLYMAP( '__countryName2IsoThree', LOWER([ACC_OperatingUnit__c])), '-') AS [Account.ACC_OperatingUnit__c_GeoInfo],
+	[Id] AS [IsDeleted];
+SELECT Id,
+	IsDeleted,
+	MasterRecordId,
+	Name,
+	Type,
+	RecordTypeId,
+	ParentId,
+	BillingStreet,
+	BillingCity,
+	BillingState,
+	BillingPostalCode,
+	BillingCountry,
+	BillingLatitude,
+	BillingLongitude,
+	BillingGeocodeAccuracy,
+	ShippingStreet,
+	ShippingCity,
+	ShippingState,
+	ShippingPostalCode,
+	ShippingCountry,
+	ShippingLatitude,
+	ShippingLongitude,
+	ShippingGeocodeAccuracy,
+	Phone,
+	Fax,
+	AccountNumber,
+	Website,
+	PhotoUrl,
+	Sic,
+	Industry,
+	AnnualRevenue,
+	NumberOfEmployees,
+	Ownership,
+	TickerSymbol,
+	Description,
+	Rating,
+	Site,
+	OwnerId,
+	CreatedDate,
+	CreatedById,
+	LastModifiedDate,
+	LastModifiedById,
+	SystemModstamp,
+	LastActivityDate,
+	LastViewedDate,
+	LastReferencedDate,
+	Jigsaw,
+	JigsawCompanyId,
+	AccountSource,
+	SicDesc,
+	OperatingHoursId,
+	ACC_Activate__c,
+	ACC_ActivatedBy__c,
+	ACC_ActivationDate__c,
+	ACC_CarteBlanche__c,
+	ACC_ClosedDays__c,
+	ACC_Comments__c,
+	ACC_Contact__c,
+	ACC_Definitelyclosed__c,
+	ACC_DoNotVisit__c,
+	ACC_ECPInterest__c,
+	ACC_Email__c,
+	ACC_EngagementDate__c,
+	ACC_ExternalID__c,
+	ACC_Interest__c,
+	ACC_IsTrained__c,
+	ACC_Itelis__c,
+	ACC_Kalixia__c,
+	ACC_LastVisitedDate__c,
+	ACC_LensCasterVisitDate__c,
+	ACC_MainBusinessGroup__c,
+	ACC_MainContact__c,
+	ACC_MondayOpeningTime__c,
+	ACC_NumberOfPeopleTrained__c,
+	ACC_Numberofvisits__c,
+	ACC_OperatingUnit__c,
+	ACC_OpticianProfile__c,
+	ACC_PointofSales__c,
+	ACC_PrimaryCompetitor__c,
+	ACC_PrimaryLensCaster__c,
+	ACC_Priority__c,
+	ACC_Program__c,
+	ACC_ReasonNotToVisit__c,
+	ACC_Reengagement_Date__c,
+	ACC_RemainingToBeTrained__c,
+	ACC_SanteClair__c,
+	ACC_SecondaryLensCaster__c,
+	ACC_Seveane__c,
+	ACC_ShopLocation__c,
+	ACC_ShopOwner__c,
+	ACC_ShopPositioning__c,
+	ACC_SurveySentAfterFirstTraining__c,
+	ACC_SurveySentUponAccount__c,
+	ACC_Targeted__c,
+	ACC_TertiaryLensCaster__c,
+	ACC_ToTarget__c,
+	ACC_TotalStaffTrainingIndicator__c,
+	ACC_TotalStaffTrainingStatus__c,
+	ACC_TrainingStatus__c,
+	ACC_Visit__c,
+	ACC_WeekClosingTime__c,
+	ACC_WeekOpeningTime__c,
+	ACC_isActivated__c
+FROM Account;
+
+[LensCaster__c]:
+LOAD
+	[Id] AS [ACC_PrimaryLensCaster__c-Id],
+	[OwnerId] AS [LensCaster__c.OwnerId],
+	[IsDeleted] AS [LensCaster__c.IsDeleted],
+	[Name] AS [LensCaster__c.Name],
+	[CreatedDate] AS [LensCaster__c.CreatedDate],
+	[CreatedById] AS [LensCaster__c.CreatedById],
+	[LastModifiedDate] AS [LensCaster__c.LastModifiedDate],
+	[LastModifiedById] AS [LensCaster__c.LastModifiedById],
+	[SystemModstamp] AS [LensCaster__c.SystemModstamp],
+	[LastActivityDate] AS [LensCaster__c.LastActivityDate],
+	[LastViewedDate] AS [LensCaster__c.LastViewedDate],
+	[LastReferencedDate] AS [LensCaster__c.LastReferencedDate],
+	[LC_Active__c],
+	[LC_OperatingUnit__c],
+	APPLYMAP( '__countryCodeIsoThree2Polygon', APPLYMAP( '__countryName2IsoThree', LOWER([LC_OperatingUnit__c])), '-') AS [LensCaster__c.LC_OperatingUnit__c_GeoInfo];
+SELECT Id,
+	OwnerId,
+	IsDeleted,
+	Name,
+	CreatedDate,
+	CreatedById,
+	LastModifiedDate,
+	LastModifiedById,
+	SystemModstamp,
+	LastActivityDate,
+	LastViewedDate,
+	LastReferencedDate,
+	LC_Active__c,
+	LC_OperatingUnit__c
+FROM LensCaster__c;
+
+[User]:
+LOAD
+	[Id] AS [Id-OwnerId],
+	[LastName],
+	[FirstName],
+	[Name] AS [User.Name],
+	[CompanyName],
+	[Title],
+	[UserRoleId] AS [Id-UserRoleId];
+SELECT Id,
+	LastName,
+	FirstName,
+	Name,
+	CompanyName,
+	Title,
+	UserRoleId
+FROM User;
+
+[ServiceAppointment]:
+LOAD
+	[Id] AS [ServiceAppointment.Id],
+	[OwnerId] AS [Id-OwnerId],
+	[IsDeleted] AS [ServiceAppointment.IsDeleted],
+	[AppointmentNumber],
+	[CreatedDate] AS [ServiceAppointment.CreatedDate],
+	[CreatedById] AS [ServiceAppointment.CreatedById],
+	[LastModifiedDate] AS [ServiceAppointment.LastModifiedDate],
+	[LastModifiedById] AS [ServiceAppointment.LastModifiedById],
+	[SystemModstamp] AS [ServiceAppointment.SystemModstamp],
+	[LastViewedDate] AS [ServiceAppointment.LastViewedDate],
+	[LastReferencedDate] AS [ServiceAppointment.LastReferencedDate],
+	[ParentRecordId],
+	[ParentRecordType],
+	[AccountId] AS [Id-SD_Account__c],
+	[WorkTypeId] AS [Id-WorkTypeId],
+	[ContactId] AS [ServiceAppointment.ContactId],
+	[Street] AS [ServiceAppointment.Street],
+	[City] AS [ServiceAppointment.City],
+	[State] AS [ServiceAppointment.State],
+	[PostalCode] AS [ServiceAppointment.PostalCode],
+	[Country] AS [ServiceAppointment.Country],
+	[Latitude] AS [ServiceAppointment.Latitude],
+	[Longitude] AS [ServiceAppointment.Longitude],
+	[GeocodeAccuracy] AS [ServiceAppointment.GeocodeAccuracy],
+	[Description] AS [ServiceAppointment.Description],
+	[EarliestStartTime],
+	[DueDate],
+	[Duration] AS [ServiceAppointment.Duration],
+	[ArrivalWindowStartTime],
+	[ArrivalWindowEndTime],
+	[Status] AS [ServiceAppointment.Status],
+	[SchedStartTime],
+	[SchedEndTime],
+	[ActualStartTime],
+	[ActualEndTime],
+	[ActualDuration],
+	[DurationType] AS [ServiceAppointment.DurationType],
+	[DurationInMinutes] AS [ServiceAppointment.DurationInMinutes],
+	[ServiceTerritoryId] AS [ServiceAppointment.ServiceTerritoryId],
+	[Subject] AS [ServiceAppointment.Subject],
+	[ParentRecordStatusCategory],
+	[StatusCategory] AS [ServiceAppointment.StatusCategory],
+	[ServiceNote],
+	[FSL__Appointment_Grade__c],
+	[FSL__Auto_Schedule__c],
+	[FSL__Duration_In_Minutes__c],
+	[FSL__Emergency__c],
+	[FSL__GanttColor__c],
+	[FSL__GanttIcon__c],
+	[FSL__GanttLabel__c],
+	[FSL__Gantt_Display_Date__c],
+	[FSL__InJeopardyReason__c],
+	[FSL__InJeopardy__c],
+	[FSL__InternalSLRGeolocation__Latitude__s],
+	[FSL__InternalSLRGeolocation__Longitude__s],
+	[FSL__IsFillInCandidate__c] AS [ServiceAppointment.FSL__IsFillInCandidate__c],
+	[FSL__IsMultiDay__c],
+	[FSL__MDS_Calculated_length__c],
+	[FSL__MDT_Operational_Time__c],
+	[FSL__Pinned__c],
+	[FSL__Prevent_Geocoding_For_Chatter_Actions__c] AS [ServiceAppointment.FSL__Prevent_Geocoding_For_Chatter_Actions__c],
+	[FSL__Related_Service__c],
+	[FSL__Same_Day__c],
+	[FSL__Same_Resource__c],
+	[FSL__Schedule_Mode__c],
+	[FSL__Schedule_over_lower_priority_appointment__c],
+	[FSL__Scheduling_Policy_Used__c],
+	[FSL__Time_Dependency__c],
+	[FSL__UpdatedByOptimization__c],
+	[FSL__Use_Async_Logic__c],
+	[FSL__Virtual_Service_For_Chatter_Action__c],
+	[FSL_Compliance__c],
+	[FSL_FTFR_Count__c],
+	[Incomplete_Reason_Picklist__c],
+	[Incomplete_Reason__c],
+	[SA_AccountEmail__c],
+	[SA_Main_Contact__c],
+	[SA_Related_Account__c],
+	[SA_WORelatedContacts__c],
+	[SA_Account_Number__c],
+	GeoMakePoint([Latitude], [Longitude]) AS [ServiceAppointment.Longitude_ServiceAppointment.Latitude];
+SELECT Id,
+	OwnerId,
+	IsDeleted,
+	AppointmentNumber,
+	CreatedDate,
+	CreatedById,
+	LastModifiedDate,
+	LastModifiedById,
+	SystemModstamp,
+	LastViewedDate,
+	LastReferencedDate,
+	ParentRecordId,
+	ParentRecordType,
+	AccountId,
+	WorkTypeId,
+	ContactId,
+	Street,
+	City,
+	State,
+	PostalCode,
+	Country,
+	Latitude,
+	Longitude,
+	GeocodeAccuracy,
+	Description,
+	EarliestStartTime,
+	DueDate,
+	Duration,
+	ArrivalWindowStartTime,
+	ArrivalWindowEndTime,
+	Status,
+	SchedStartTime,
+	SchedEndTime,
+	ActualStartTime,
+	ActualEndTime,
+	ActualDuration,
+	DurationType,
+	DurationInMinutes,
+	ServiceTerritoryId,
+	Subject,
+	ParentRecordStatusCategory,
+	StatusCategory,
+	ServiceNote,
+	FSL__Appointment_Grade__c,
+	FSL__Auto_Schedule__c,
+	FSL__Duration_In_Minutes__c,
+	FSL__Emergency__c,
+	FSL__GanttColor__c,
+	FSL__GanttIcon__c,
+	FSL__GanttLabel__c,
+	FSL__Gantt_Display_Date__c,
+	FSL__InJeopardyReason__c,
+	FSL__InJeopardy__c,
+	FSL__InternalSLRGeolocation__Latitude__s,
+	FSL__InternalSLRGeolocation__Longitude__s,
+	FSL__IsFillInCandidate__c,
+	FSL__IsMultiDay__c,
+	FSL__MDS_Calculated_length__c,
+	FSL__MDT_Operational_Time__c,
+	FSL__Pinned__c,
+	FSL__Prevent_Geocoding_For_Chatter_Actions__c,
+	FSL__Related_Service__c,
+	FSL__Same_Day__c,
+	FSL__Same_Resource__c,
+	FSL__Schedule_Mode__c,
+	FSL__Schedule_over_lower_priority_appointment__c,
+	FSL__Scheduling_Policy_Used__c,
+	FSL__Time_Dependency__c,
+	FSL__UpdatedByOptimization__c,
+	FSL__Use_Async_Logic__c,
+	FSL__Virtual_Service_For_Chatter_Action__c,
+	FSL_Compliance__c,
+	FSL_FTFR_Count__c,
+	Incomplete_Reason_Picklist__c,
+	Incomplete_Reason__c,
+	SA_AccountEmail__c,
+	SA_Main_Contact__c,
+	SA_Related_Account__c,
+	SA_WORelatedContacts__c,
+	SA_Account_Number__c
+FROM ServiceAppointment;
+
+[Task]:
+LOAD
+	[Id] AS [Task.Id],
+	[WhoId],
+	[WhatId],
+	[Subject] AS [Task.Subject],
+	[ActivityDate],
+	[Status] AS [Task.Status],
+	[Priority] AS [Task.Priority],
+	[IsHighPriority],
+	[OwnerId] AS [Task.OwnerId],
+	[Description] AS [Task.Description],
+	[Type] AS [Task.Type],
+	[IsDeleted] AS [Task.IsDeleted],
+	[AccountId] AS [IsDeleted],
+	[IsClosed] AS [Task.IsClosed],
+	[CreatedDate] AS [Task.CreatedDate],
+	[CreatedById] AS [Task.CreatedById],
+	[LastModifiedDate] AS [Task.LastModifiedDate],
+	[LastModifiedById] AS [Task.LastModifiedById],
+	[SystemModstamp] AS [Task.SystemModstamp],
+	[IsArchived],
+	[CallDurationInSeconds],
+	[CallType],
+	[CallDisposition],
+	[CallObject],
+	[ReminderDateTime],
+	[IsReminderSet],
+	[RecurrenceActivityId],
+	[IsRecurrence],
+	[RecurrenceStartDateOnly],
+	[RecurrenceEndDateOnly],
+	[RecurrenceTimeZoneSidKey],
+	[RecurrenceType],
+	[RecurrenceInterval],
+	[RecurrenceDayOfWeekMask],
+	[RecurrenceDayOfMonth],
+	[RecurrenceInstance],
+	[RecurrenceMonthOfYear],
+	[RecurrenceRegeneratedType],
+	[TaskSubtype],
+	[CompletedDateTime],
+	[FSL__Count_of_Events__c],
+	[FSL__Count_of_Tasks__c],
+	[FSL__Event_Type__c],
+	[DB_Activity_Type__c];
+SELECT Id,
+	WhoId,
+	WhatId,
+	Subject,
+	ActivityDate,
+	Status,
+	Priority,
+	IsHighPriority,
+	OwnerId,
+	Description,
+	Type,
+	IsDeleted,
+	AccountId,
+	IsClosed,
+	CreatedDate,
+	CreatedById,
+	LastModifiedDate,
+	LastModifiedById,
+	SystemModstamp,
+	IsArchived,
+	CallDurationInSeconds,
+	CallType,
+	CallDisposition,
+	CallObject,
+	ReminderDateTime,
+	IsReminderSet,
+	RecurrenceActivityId,
+	IsRecurrence,
+	RecurrenceStartDateOnly,
+	RecurrenceEndDateOnly,
+	RecurrenceTimeZoneSidKey,
+	RecurrenceType,
+	RecurrenceInterval,
+	RecurrenceDayOfWeekMask,
+	RecurrenceDayOfMonth,
+	RecurrenceInstance,
+	RecurrenceMonthOfYear,
+	RecurrenceRegeneratedType,
+	TaskSubtype,
+	CompletedDateTime,
+	FSL__Count_of_Events__c,
+	FSL__Count_of_Tasks__c,
+	FSL__Event_Type__c,
+	DB_Activity_Type__c
+FROM Task;
+
+[SalesData__c]:
+LOAD
+	[Id] AS [SalesData__c.Id],
+	[IsDeleted] AS [SalesData__c.IsDeleted],
+	[Name] AS [SalesData__c.Name],
+	[CreatedDate] AS [SalesData__c.CreatedDate],
+	[CreatedById] AS [SalesData__c.CreatedById],
+	[LastModifiedDate],
+	[LastModifiedById],
+	[SystemModstamp],
+	[SD_Account__c] AS [Id-SD_Account__c],
+	[SD_Date__c],
+	[SD_MIDTransitions__c],
+	[SD_Month__c],
+	[SD_PAL_Transitions__c],
+	[SD_PYTotalTransitions__c],
+	[SD_PY_MIDTransitions__c],
+	[SD_PY_PALTransitions__c],
+	[SD_PY_SVTransitions__c],
+	[SD_PY_TotalLensesVolume__c],
+	[SD_PY_TotalMID__c],
+	[SD_PY_TotalPAL__c],
+	[SD_PY_TotalSV__c],
+	[SD_SVTransitions__c],
+	[SD_TotalLensesVolume__c],
+	[SD_TotalMID__c],
+	[SD_TotalPAL__c],
+	[SD_TotalSV__c],
+	[SD_TotalTransitions__c],
+	[SD_Year__c],
+	[SD_Product__c],
+	[SD_Color__c],
+	[SD_Index__c],
+	MonthEnd(MakeDate([SD_Year__c], Num(Month(Date#([SD_Month__c],'MMMM'))), 1)) AS [Sales_Date];
+SELECT Id,
+	IsDeleted,
+	Name,
+	CreatedDate,
+	CreatedById,
+	LastModifiedDate,
+	LastModifiedById,
+	SystemModstamp,
+	SD_Account__c,
+	SD_Date__c,
+	SD_MIDTransitions__c,
+	SD_Month__c,
+	SD_PAL_Transitions__c,
+	SD_PYTotalTransitions__c,
+	SD_PY_MIDTransitions__c,
+	SD_PY_PALTransitions__c,
+	SD_PY_SVTransitions__c,
+	SD_PY_TotalLensesVolume__c,
+	SD_PY_TotalMID__c,
+	SD_PY_TotalPAL__c,
+	SD_PY_TotalSV__c,
+	SD_SVTransitions__c,
+	SD_TotalLensesVolume__c,
+	SD_TotalMID__c,
+	SD_TotalPAL__c,
+	SD_TotalSV__c,
+	SD_TotalTransitions__c,
+	SD_Year__c,
+	SD_Product__c,
+	SD_Color__c,
+	SD_Index__c
+FROM SalesData__c;
+
+[BusinessGroup__c]:
+LOAD
+	[Id] AS [ACC_MainBusinessGroup__c-Id],
+	[OwnerId] AS [BusinessGroup__c.OwnerId],
+	[IsDeleted] AS [BusinessGroup__c.IsDeleted],
+	[Name] AS [BusinessGroup__c.Name],
+	[BG_Active__c],
+	[BG_OperatingUnit__c],
+	APPLYMAP( '__countryCodeIsoThree2Polygon', APPLYMAP( '__countryName2IsoThree', LOWER([BG_OperatingUnit__c])), '-') AS [BusinessGroup__c.BG_OperatingUnit__c_GeoInfo];
+SELECT Id,
+	OwnerId,
+	IsDeleted,
+	Name,
+	BG_Active__c,
+	BG_OperatingUnit__c
+FROM BusinessGroup__c;
+
+[UserRole]:
+LOAD
+	[Id] AS [Id-UserRoleId],
+	[Name] AS [UserRole.Name],
+	[RollupDescription];
+SELECT Id,
+	Name,
+	RollupDescription
+FROM UserRole;
+
+[WorkType]:
+LOAD
+	[Id] AS [Id-WorkTypeId],
+	[OwnerId] AS [WorkType.OwnerId],
+	[IsDeleted] AS [WorkType.IsDeleted],
+	[Name] AS [WorkType.Name],
+	[CreatedDate],
+	[CreatedById],
+	[LastModifiedDate] AS [WorkType.LastModifiedDate],
+	[LastModifiedById] AS [WorkType.LastModifiedById],
+	[SystemModstamp] AS [WorkType.SystemModstamp],
+	[LastViewedDate],
+	[LastReferencedDate],
+	[Description] AS [WorkType.Description],
+	[EstimatedDuration],
+	[DurationType],
+	[DurationInMinutes],
+	[ShouldAutoCreateSvcAppt],
+	[ServiceReportTemplateId] AS [WorkType.ServiceReportTemplateId],
+	[MinimumCrewSize] AS [WorkType.MinimumCrewSize],
+	[RecommendedCrewSize] AS [WorkType.RecommendedCrewSize],
+	[FSL__Due_Date_Offset__c],
+	[FSL__Exact_Appointments__c];
+SELECT Id,
+	OwnerId,
+	IsDeleted,
+	Name,
+	CreatedDate,
+	CreatedById,
+	LastModifiedDate,
+	LastModifiedById,
+	SystemModstamp,
+	LastViewedDate,
+	LastReferencedDate,
+	Description,
+	EstimatedDuration,
+	DurationType,
+	DurationInMinutes,
+	ShouldAutoCreateSvcAppt,
+	ServiceReportTemplateId,
+	MinimumCrewSize,
+	RecommendedCrewSize,
+	FSL__Due_Date_Offset__c,
+	FSL__Exact_Appointments__c
+FROM WorkType;
+
+[BusinessGroupParent]:
+LOAD
+	[BusinessGroupID] AS [ACC_MainBusinessGroup__c-Id],
+	[BusinessGroupName],
+	[BusinessGroupParent]
+ FROM [lib://Transitions Development:DataFiles/Business Groups Parent.xlsx]
+(ooxml, embedded labels, table is Sheet1);
+
+
+TAG FIELD [MasterRecordId] WITH '$hidden';
+TAG FIELD [Type] WITH '$hidden';
+TAG FIELD [ParentId] WITH '$hidden';
+TAG FIELD [BillingStreet] WITH '$hidden';
+TAG FIELD [BillingCity] WITH '$hidden';
+TAG FIELD [BillingState] WITH '$hidden';
+TAG FIELD [BillingPostalCode] WITH '$hidden';
+TAG FIELD [BillingCountry] WITH '$hidden';
+TAG FIELD [ShippingStreet] WITH '$hidden';
+TAG FIELD [ShippingCity] WITH '$hidden';
+TAG FIELD [ShippingState] WITH '$hidden';
+TAG FIELD [ShippingPostalCode] WITH '$hidden';
+TAG FIELD [ShippingCountry] WITH '$hidden';
+TAG FIELD [Account.Phone] WITH '$hidden';
+TAG FIELD [Account.Fax] WITH '$hidden';
+TAG FIELD [Website] WITH '$hidden';
+TAG FIELD [PhotoUrl] WITH '$hidden';
+TAG FIELD [Sic] WITH '$hidden';
+TAG FIELD [Industry] WITH '$hidden';
+TAG FIELD [AnnualRevenue] WITH '$hidden';
+TAG FIELD [Ownership] WITH '$hidden';
+TAG FIELD [TickerSymbol] WITH '$hidden';
+TAG FIELD [Description] WITH '$hidden';
+TAG FIELD [Rating] WITH '$hidden';
+TAG FIELD [Site] WITH '$hidden';
+TAG FIELD [Account.CreatedDate] WITH '$hidden';
+TAG FIELD [Account.CreatedById] WITH '$hidden';
+TAG FIELD [Account.LastModifiedDate] WITH '$hidden';
+TAG FIELD [Account.LastModifiedById] WITH '$hidden';
+TAG FIELD [Account.SystemModstamp] WITH '$hidden';
+TAG FIELD [Jigsaw] WITH '$hidden';
+TAG FIELD [JigsawCompanyId] WITH '$hidden';
+TAG FIELD [AccountSource] WITH '$hidden';
+TAG FIELD [SicDesc] WITH '$hidden';
+TAG FIELD [ACC_ClosedDays__c] WITH '$hidden';
+TAG FIELD [ACC_Comments__c] WITH '$hidden';
+TAG FIELD [ACC_Contact__c] WITH '$hidden';
+TAG FIELD [ACC_ECPInterest__c] WITH '$hidden';
+TAG FIELD [ACC_Email__c] WITH '$hidden';
+TAG FIELD [ACC_MondayOpeningTime__c] WITH '$hidden';
+TAG FIELD [ACC_ShopOwner__c] WITH '$hidden';
+TAG FIELD [ACC_Targeted__c] WITH '$hidden';
+TAG FIELD [ACC_TotalStaffTrainingIndicator__c] WITH '$hidden';
+TAG FIELD [ACC_TrainingStatus__c] WITH '$hidden';
+TAG FIELD [ACC_Visit__c] WITH '$hidden';
+TAG FIELD [ACC_WeekClosingTime__c] WITH '$hidden';
+TAG FIELD [ACC_WeekOpeningTime__c] WITH '$hidden';
+TAG FIELD [ACC_isActivated__c] WITH '$hidden';
+TAG FIELD [LensCaster__c.CreatedDate] WITH '$hidden';
+TAG FIELD [LensCaster__c.CreatedById] WITH '$hidden';
+TAG FIELD [LensCaster__c.LastModifiedDate] WITH '$hidden';
+TAG FIELD [LensCaster__c.LastModifiedById] WITH '$hidden';
+TAG FIELD [LensCaster__c.SystemModstamp] WITH '$hidden';
+TAG FIELD [ServiceAppointment.CreatedDate] WITH '$hidden';
+TAG FIELD [ServiceAppointment.CreatedById] WITH '$hidden';
+TAG FIELD [ServiceAppointment.LastModifiedDate] WITH '$hidden';
+TAG FIELD [ServiceAppointment.LastModifiedById] WITH '$hidden';
+TAG FIELD [ServiceAppointment.SystemModstamp] WITH '$hidden';
+TAG FIELD [ServiceAppointment.LastViewedDate] WITH '$hidden';
+TAG FIELD [ServiceAppointment.LastReferencedDate] WITH '$hidden';
+TAG FIELD [ServiceAppointment.ContactId] WITH '$hidden';
+TAG FIELD [ServiceAppointment.Street] WITH '$hidden';
+TAG FIELD [ServiceAppointment.City] WITH '$hidden';
+TAG FIELD [ServiceAppointment.State] WITH '$hidden';
+TAG FIELD [ServiceAppointment.PostalCode] WITH '$hidden';
+TAG FIELD [ServiceAppointment.Country] WITH '$hidden';
+TAG FIELD [ServiceAppointment.GeocodeAccuracy] WITH '$hidden';
+TAG FIELD [ServiceAppointment.Description] WITH '$hidden';
+TAG FIELD [SA_AccountEmail__c] WITH '$hidden';
+TAG FIELD [SA_Main_Contact__c] WITH '$hidden';
+TAG FIELD [SA_Related_Account__c] WITH '$hidden';
+TAG FIELD [SA_WORelatedContacts__c] WITH '$hidden';
+TAG FIELD [SA_Account_Number__c] WITH '$hidden';
+TAG FIELD [ServiceAppointment.Longitude_ServiceAppointment.Latitude] WITH '$hidden';
+TAG FIELD [SalesData__c.Name] WITH '$hidden';
+TAG FIELD [SalesData__c.CreatedDate] WITH '$hidden';
+TAG FIELD [SalesData__c.CreatedById] WITH '$hidden';
+TAG FIELD [LastModifiedDate] WITH '$hidden';
+TAG FIELD [LastModifiedById] WITH '$hidden';
+TAG FIELD [SystemModstamp] WITH '$hidden';
+
+TAG FIELD [BillingCountry] WITH '$geoname', '$relates_Account.BillingCountry_GeoInfo';
+TAG FIELD [Account.BillingCountry_GeoInfo] WITH '$geopolygon', '$hidden', '$relates_BillingCountry';
+TAG FIELD [ACC_OperatingUnit__c] WITH '$geoname', '$relates_Account.ACC_OperatingUnit__c_GeoInfo';
+TAG FIELD [Account.ACC_OperatingUnit__c_GeoInfo] WITH '$geopolygon', '$hidden', '$relates_ACC_OperatingUnit__c';
+
+TAG FIELD [LC_OperatingUnit__c] WITH '$geoname', '$relates_LensCaster__c.LC_OperatingUnit__c_GeoInfo';
+TAG FIELD [LensCaster__c.LC_OperatingUnit__c_GeoInfo] WITH '$geopolygon', '$hidden', '$relates_LC_OperatingUnit__c';
+
+TAG FIELD [BG_OperatingUnit__c] WITH '$geoname', '$relates_BusinessGroup__c.BG_OperatingUnit__c_GeoInfo';
+TAG FIELD [BusinessGroup__c.BG_OperatingUnit__c_GeoInfo] WITH '$geopolygon', '$hidden', '$relates_BG_OperatingUnit__c';
+
+DROP TABLES __countryAliasesBase, __countryGeoBase;
+[autoCalendar]: 
+  DECLARE FIELD DEFINITION Tagged ('$date')
+FIELDS
+  Dual(Year($1), YearStart($1)) AS [Year] Tagged ('$axis', '$year'),
+  Dual('Q'&Num(Ceil(Num(Month($1))/3)),Num(Ceil(NUM(Month($1))/3),00)) AS [Quarter] Tagged ('$quarter', '$cyclic'),
+  Dual(Year($1)&'-Q'&Num(Ceil(Num(Month($1))/3)),QuarterStart($1)) AS [YearQuarter] Tagged ('$yearquarter', '$qualified'),
+  Dual('Q'&Num(Ceil(Num(Month($1))/3)),QuarterStart($1)) AS [_YearQuarter] Tagged ('$yearquarter', '$hidden', '$simplified'),
+  Month($1) AS [Month] Tagged ('$month', '$cyclic'),
+  Dual(Year($1)&'-'&Month($1), monthstart($1)) AS [YearMonth] Tagged ('$axis', '$yearmonth', '$qualified'),
+  Dual(Month($1), monthstart($1)) AS [_YearMonth] Tagged ('$axis', '$yearmonth', '$simplified', '$hidden'),
+  Dual('W'&Num(Week($1),00), Num(Week($1),00)) AS [Week] Tagged ('$weeknumber', '$cyclic'),
+  Date(Floor($1)) AS [Date] Tagged ('$axis', '$date', '$qualified'),
+  Date(Floor($1), 'D') AS [_Date] Tagged ('$axis', '$date', '$hidden', '$simplified'),
+  If (DayNumberOfYear($1) <= DayNumberOfYear(Today()), 1, 0) AS [InYTD] ,
+  Year(Today())-Year($1) AS [YearsAgo] ,
+  If (DayNumberOfQuarter($1) <= DayNumberOfQuarter(Today()),1,0) AS [InQTD] ,
+  4*Year(Today())+Ceil(Month(Today())/3)-4*Year($1)-Ceil(Month($1)/3) AS [QuartersAgo] ,
+  Ceil(Month(Today())/3)-Ceil(Month($1)/3) AS [QuarterRelNo] ,
+  If(Day($1)<=Day(Today()),1,0) AS [InMTD] ,
+  12*Year(Today())+Month(Today())-12*Year($1)-Month($1) AS [MonthsAgo] ,
+  Month(Today())-Month($1) AS [MonthRelNo] ,
+  If(WeekDay($1)<=WeekDay(Today()),1,0) AS [InWTD] ,
+  (WeekStart(Today())-WeekStart($1))/7 AS [WeeksAgo] ,
+  Week(Today())-Week($1) AS [WeekRelNo] ;
+
+DERIVE FIELDS FROM FIELDS [Account.CreatedDate], [Account.LastModifiedDate], [Account.SystemModstamp], [Account.LastActivityDate], [ACC_ActivationDate__c], [ACC_EngagementDate__c], [ACC_LastVisitedDate__c], [ACC_LensCasterVisitDate__c], [ACC_Reengagement_Date__c], [LensCaster__c.CreatedDate], [LensCaster__c.LastModifiedDate], [LensCaster__c.SystemModstamp], [ServiceAppointment.CreatedDate], [ServiceAppointment.LastModifiedDate], [ServiceAppointment.SystemModstamp], [EarliestStartTime], [DueDate], [ArrivalWindowStartTime], [ArrivalWindowEndTime], [SchedStartTime], [SchedEndTime], [ActualStartTime], [ActualEndTime], [ActivityDate], [Task.CreatedDate], [Task.LastModifiedDate], [Task.SystemModstamp], [ReminderDateTime], [RecurrenceStartDateOnly], [RecurrenceEndDateOnly], [CompletedDateTime], [SalesData__c.CreatedDate], [LastModifiedDate], [SystemModstamp], [SD_Date__c], [Sales_Date], [CreatedDate], [WorkType.LastModifiedDate], [WorkType.SystemModstamp] USING [autoCalendar] ;
+
+LOAD
+    LegalEntityCode,
+    CustomerCode,
+    "Year",
+    "Month",
+    EUProductTTEColor,
+    EUProductTTEGeneration,
+    EUIndexCode,
+    EUProductTTE0,
+    MID_Transition,
+    PAL_Transition,
+    SV_Transition,
+    Total_Transition,
+    Total_MID,
+    Total_PAL,
+    Total_SV,
+    Total_Lenses
+FROM [lib://DataFiles/TransitionMonthlyDataJan20.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ';', msq);

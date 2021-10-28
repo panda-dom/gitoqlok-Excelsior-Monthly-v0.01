@@ -1,0 +1,9 @@
+{
+  "qIsHidden": true,
+  "qName": "ServiceAppointment.City",
+  "qTags": [
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

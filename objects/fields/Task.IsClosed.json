@@ -1,0 +1,10 @@
+{
+  "qName": "Task.IsClosed",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

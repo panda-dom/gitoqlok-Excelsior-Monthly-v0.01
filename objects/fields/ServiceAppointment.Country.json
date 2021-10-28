@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "ServiceAppointment.Country",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

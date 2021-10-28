@@ -1,0 +1,10 @@
+{
+  "qName": "DueDate",
+  "qTags": [
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}
