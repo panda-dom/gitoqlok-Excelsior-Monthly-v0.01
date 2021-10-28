@@ -6,3 +6,4 @@ Created By panda-dom(No name specified in Profile) at Thu Oct 28 2021 18:42:36 G
 Branch Name|Qlik application
 ---|---
 main|[https://essilor-analytics-platform.us.qlikcloud.com/sense/app/b99871d6-c21e-451f-9976-7cec3dd56791](https://essilor-analytics-platform.us.qlikcloud.com/sense/app/b99871d6-c21e-451f-9976-7cec3dd56791)
+christian.gantong-essilor.com|[https://essilor-analytics-platform.us.qlikcloud.com/sense/app/4bec3f92-b654-4b6f-8b3b-ba3111b7e164](https://essilor-analytics-platform.us.qlikcloud.com/sense/app/4bec3f92-b654-4b6f-8b3b-ba3111b7e164)
