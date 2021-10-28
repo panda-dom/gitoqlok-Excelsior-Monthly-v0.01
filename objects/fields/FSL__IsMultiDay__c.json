@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__IsMultiDay__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

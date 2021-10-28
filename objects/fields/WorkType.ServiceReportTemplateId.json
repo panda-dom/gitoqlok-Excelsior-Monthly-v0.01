@@ -1,0 +1,10 @@
+{
+  "qName": "WorkType.ServiceReportTemplateId",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

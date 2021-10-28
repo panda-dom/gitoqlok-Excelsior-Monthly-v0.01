@@ -1,0 +1,12 @@
+{
+  "qName": "BG_OperatingUnit__c",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$geoname",
+    "$relates_BusinessGroup__c.BG_OperatingUnit__c_GeoInfo"
+  ],
+  "qSrcTables": [
+    "BusinessGroup__c"
+  ]
+}

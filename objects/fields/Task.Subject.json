@@ -1,0 +1,9 @@
+{
+  "qName": "Task.Subject",
+  "qTags": [
+    "$text"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "TtegQ",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "PY_Share",
+    "qDef": "Sum(SD_PYTotalTransitions__c) / Sum(SD_PY_TotalLensesVolume__c)",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'PY Penetration'",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "PY_Share",
+    "description": "",
+    "tags": []
+  }
+}

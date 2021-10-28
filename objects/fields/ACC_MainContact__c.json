@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_MainContact__c",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

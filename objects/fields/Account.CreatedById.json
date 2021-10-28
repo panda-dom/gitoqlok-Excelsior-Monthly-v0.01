@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "Account.CreatedById",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

@@ -1,0 +1,10 @@
+{
+  "qName": "SalesData__c.IsDeleted",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "SalesData__c"
+  ]
+}

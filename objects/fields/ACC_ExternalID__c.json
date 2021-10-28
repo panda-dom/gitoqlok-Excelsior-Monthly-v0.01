@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_ExternalID__c",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "qName": "NumberOfEmployees",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

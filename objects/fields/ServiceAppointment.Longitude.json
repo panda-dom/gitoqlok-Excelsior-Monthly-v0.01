@@ -1,0 +1,9 @@
+{
+  "qName": "ServiceAppointment.Longitude",
+  "qTags": [
+    "$numeric"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

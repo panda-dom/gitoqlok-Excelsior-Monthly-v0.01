@@ -1,0 +1,10 @@
+{
+  "qName": "ServiceAppointment.ServiceTerritoryId",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

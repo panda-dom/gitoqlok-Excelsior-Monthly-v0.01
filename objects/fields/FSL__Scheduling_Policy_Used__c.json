@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__Scheduling_Policy_Used__c",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

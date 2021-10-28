@@ -1,0 +1,10 @@
+{
+  "qName": "RecurrenceDayOfMonth",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

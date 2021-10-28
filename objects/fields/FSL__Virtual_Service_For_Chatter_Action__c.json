@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__Virtual_Service_For_Chatter_Action__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

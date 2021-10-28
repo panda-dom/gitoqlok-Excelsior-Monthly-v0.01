@@ -1,0 +1,10 @@
+{
+  "qName": "LastName",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "User"
+  ]
+}

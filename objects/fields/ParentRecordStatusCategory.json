@@ -1,0 +1,10 @@
+{
+  "qName": "ParentRecordStatusCategory",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

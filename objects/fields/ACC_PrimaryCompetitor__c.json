@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_PrimaryCompetitor__c",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

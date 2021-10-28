@@ -1,0 +1,12 @@
+{
+  "qIsHidden": true,
+  "qName": "LensCaster__c.LC_OperatingUnit__c_GeoInfo",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden",
+    "$geopolygon",
+    "$relates_LC_OperatingUnit__c"
+  ],
+  "qSrcTables": []
+}

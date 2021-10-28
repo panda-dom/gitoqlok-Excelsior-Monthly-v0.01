@@ -1,0 +1,10 @@
+{
+  "qName": "ACC_CarteBlanche__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Account"
+  ]
+}

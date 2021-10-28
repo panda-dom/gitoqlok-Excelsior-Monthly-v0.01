@@ -1,0 +1,10 @@
+{
+  "qName": "IsArchived",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

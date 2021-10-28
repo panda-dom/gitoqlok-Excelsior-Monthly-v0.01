@@ -1,0 +1,10 @@
+{
+  "qName": "WorkType.IsDeleted",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

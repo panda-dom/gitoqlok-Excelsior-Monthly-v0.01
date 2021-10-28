@@ -1,0 +1,10 @@
+{
+  "qName": "Total_Transition",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "TransitionMonthlyDataJan20"
+  ]
+}

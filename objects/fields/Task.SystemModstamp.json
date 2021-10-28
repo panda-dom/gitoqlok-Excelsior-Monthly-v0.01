@@ -1,0 +1,10 @@
+{
+  "qName": "Task.SystemModstamp",
+  "qTags": [
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

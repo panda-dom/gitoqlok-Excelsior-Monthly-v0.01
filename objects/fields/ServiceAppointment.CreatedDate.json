@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "ServiceAppointment.CreatedDate",
+  "qTags": [
+    "$hidden",
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": []
+}

@@ -1,0 +1,10 @@
+{
+  "qName": "DurationInMinutes",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

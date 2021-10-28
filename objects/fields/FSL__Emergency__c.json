@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__Emergency__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

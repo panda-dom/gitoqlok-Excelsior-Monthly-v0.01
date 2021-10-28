@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "ServiceAppointment.CreatedById",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

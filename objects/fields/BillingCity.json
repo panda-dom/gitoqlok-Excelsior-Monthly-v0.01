@@ -1,0 +1,9 @@
+{
+  "qIsHidden": true,
+  "qName": "BillingCity",
+  "qTags": [
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

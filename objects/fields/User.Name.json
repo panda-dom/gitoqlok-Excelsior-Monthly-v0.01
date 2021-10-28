@@ -1,0 +1,9 @@
+{
+  "qName": "User.Name",
+  "qTags": [
+    "$text"
+  ],
+  "qSrcTables": [
+    "User"
+  ]
+}

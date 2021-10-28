@@ -1,0 +1,10 @@
+{
+  "qName": "RecurrenceTimeZoneSidKey",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

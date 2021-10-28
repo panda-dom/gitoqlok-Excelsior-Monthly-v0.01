@@ -1,0 +1,10 @@
+{
+  "qName": "ServiceAppointment.IsDeleted",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

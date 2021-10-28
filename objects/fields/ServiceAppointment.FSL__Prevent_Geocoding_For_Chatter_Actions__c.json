@@ -1,0 +1,10 @@
+{
+  "qName": "ServiceAppointment.FSL__Prevent_Geocoding_For_Chatter_Actions__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

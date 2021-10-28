@@ -1,0 +1,10 @@
+{
+  "qName": "FSL__Pinned__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

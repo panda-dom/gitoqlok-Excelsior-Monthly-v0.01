@@ -1,0 +1,12 @@
+{
+  "qName": "ActivityDate",
+  "qTags": [
+    "$numeric",
+    "$integer",
+    "$timestamp",
+    "$date"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

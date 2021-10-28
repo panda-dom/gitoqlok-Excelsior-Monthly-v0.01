@@ -1,0 +1,10 @@
+{
+  "qName": "ArrivalWindowEndTime",
+  "qTags": [
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

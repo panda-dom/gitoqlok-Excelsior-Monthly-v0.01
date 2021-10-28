@@ -1,0 +1,10 @@
+{
+  "qName": "Task.OwnerId",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}

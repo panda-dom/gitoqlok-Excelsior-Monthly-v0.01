@@ -1,0 +1,9 @@
+{
+  "qName": "FSL__Appointment_Grade__c",
+  "qTags": [
+    "$numeric"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

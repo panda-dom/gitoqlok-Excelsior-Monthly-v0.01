@@ -1,0 +1,10 @@
+{
+  "qName": "UserRole.Name",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "UserRole"
+  ]
+}

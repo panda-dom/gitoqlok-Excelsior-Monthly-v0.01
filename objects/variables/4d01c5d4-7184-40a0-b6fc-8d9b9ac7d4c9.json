@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "4d01c5d4-7184-40a0-b6fc-8d9b9ac7d4c9",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "name",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "BusinessGroupParent",
+  "qIsScriptCreated": true
+}

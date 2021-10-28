@@ -1,0 +1,7 @@
+{
+  "qName": "FSL__Related_Service__c",
+  "qTags": [],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

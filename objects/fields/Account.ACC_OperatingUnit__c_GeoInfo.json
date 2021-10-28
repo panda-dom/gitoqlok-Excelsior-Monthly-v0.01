@@ -1,0 +1,12 @@
+{
+  "qIsHidden": true,
+  "qName": "Account.ACC_OperatingUnit__c_GeoInfo",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden",
+    "$geopolygon",
+    "$relates_ACC_OperatingUnit__c"
+  ],
+  "qSrcTables": []
+}

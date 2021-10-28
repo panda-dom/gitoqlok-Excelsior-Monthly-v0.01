@@ -1,0 +1,9 @@
+{
+  "qName": "FSL__InternalSLRGeolocation__Latitude__s",
+  "qTags": [
+    "$numeric"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment"
+  ]
+}

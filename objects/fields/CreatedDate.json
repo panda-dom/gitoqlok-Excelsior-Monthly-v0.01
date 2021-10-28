@@ -1,0 +1,10 @@
+{
+  "qName": "CreatedDate",
+  "qTags": [
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

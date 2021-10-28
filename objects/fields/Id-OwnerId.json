@@ -1,0 +1,13 @@
+{
+  "qName": "Id-OwnerId",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$key"
+  ],
+  "qSrcTables": [
+    "Account",
+    "User",
+    "ServiceAppointment"
+  ]
+}

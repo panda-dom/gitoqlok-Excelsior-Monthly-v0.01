@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "e7b12d83-a4fc-435a-9099-b96e3b1fe89e",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "Activation_Date",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "=min(Date(ACC_ActivationDate__c, 'M/D/YYYY'))",
+  "tags": []
+}

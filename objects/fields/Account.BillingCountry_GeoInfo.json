@@ -1,0 +1,12 @@
+{
+  "qIsHidden": true,
+  "qName": "Account.BillingCountry_GeoInfo",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden",
+    "$geopolygon",
+    "$relates_BillingCountry"
+  ],
+  "qSrcTables": []
+}

@@ -1,0 +1,12 @@
+{
+  "qName": "Id-WorkTypeId",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$key"
+  ],
+  "qSrcTables": [
+    "ServiceAppointment",
+    "WorkType"
+  ]
+}

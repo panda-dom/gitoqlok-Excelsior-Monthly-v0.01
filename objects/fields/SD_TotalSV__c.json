@@ -1,0 +1,10 @@
+{
+  "qName": "SD_TotalSV__c",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "SalesData__c"
+  ]
+}

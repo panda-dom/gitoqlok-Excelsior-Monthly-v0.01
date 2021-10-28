@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "46324602-a6b8-4526-93aa-539a05d677ba",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "Actual_End_Date",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "=Max(Date(ActualEndTime, 'M/D/YYYY'))",
+  "tags": []
+}

@@ -1,0 +1,10 @@
+{
+  "qName": "CompanyName",
+  "qTags": [
+    "$ascii",
+    "$text"
+  ],
+  "qSrcTables": [
+    "User"
+  ]
+}

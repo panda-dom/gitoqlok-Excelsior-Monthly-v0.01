@@ -1,0 +1,10 @@
+{
+  "qIsHidden": true,
+  "qName": "SA_AccountEmail__c",
+  "qTags": [
+    "$ascii",
+    "$text",
+    "$hidden"
+  ],
+  "qSrcTables": []
+}

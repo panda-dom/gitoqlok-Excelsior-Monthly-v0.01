@@ -1,0 +1,7 @@
+{
+  "qName": "BillingLatitude",
+  "qTags": [],
+  "qSrcTables": [
+    "Account"
+  ]
+}

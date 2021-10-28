@@ -1,0 +1,10 @@
+{
+  "qName": "WorkType.SystemModstamp",
+  "qTags": [
+    "$numeric",
+    "$timestamp"
+  ],
+  "qSrcTables": [
+    "WorkType"
+  ]
+}

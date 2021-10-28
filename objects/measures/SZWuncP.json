@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "SZWuncP",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "CY_Share_Mid",
+    "qDef": "Sum(SD_MIDTransitions__c) / Sum(SD_TotalMID__c)",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'YTD Penetration Mid'",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "CY_Share_Mid",
+    "description": "",
+    "tags": []
+  }
+}

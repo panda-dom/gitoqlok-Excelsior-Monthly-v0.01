@@ -1,0 +1,10 @@
+{
+  "qName": "IsReminderSet",
+  "qTags": [
+    "$numeric",
+    "$integer"
+  ],
+  "qSrcTables": [
+    "Task"
+  ]
+}
